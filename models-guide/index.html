@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Simple starting points for Miccy speech and note-structuring models on typical GP and clinic computers. Technical details for IT optional."
+    />
+    <title>Which model fits my computer? - Miccy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Luckiest+Guy&family=Nunito:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <!-- PostHog Analytics -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init("phc_xzdLBTiVTxyUzQHgn3ynP7k3FDv85g4mBmWkdNXBrC9d", {
+        api_host: "https://eu.i.posthog.com",
+        person_profiles: "identified_only"
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="../index.html"><span class="brand">Miccy</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#features">Features</a></li>
+            <li><a href="../index.html#clinical-workflows">Workflows</a></li>
+            <li><a href="../index.html#models-languages">Models</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../download/" class="site-nav__emphasis">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="section guide-page">
+        <div class="container container--legal">
+          <header class="guide-page__header">
+            <h1 class="guide-page__title">Which model fits my computer?</h1>
+            <p class="guide-page__lead">
+              Most GPs and specialists run <span class="brand">Miccy</span> on a
+              <strong>practice PC</strong>, a <strong>laptop in the consult room</strong>, or a
+              <strong>computer at home</strong> for letters and admin. You download
+              speech and optional note-structuring models inside the app; this page
+              only suggests <strong>where to start</strong>. Exact names and versions
+              are listed in <span class="brand">Miccy</span>&apos;s built-in picker.
+            </p>
+          </header>
+
+          <div class="guide-page__body legal-page__body">
+            <h2 id="starting-points">Starting points for typical practice setups</h2>
+            <p>
+              Choose the card that best matches the machine you actually dictate on -
+              whether that is a shared computer at the clinic, your own laptop, or a
+              desktop at home. If you are unsure how much memory the PC has, check
+              with your practice IT or in the system settings.
+            </p>
+            <div class="stack stack--cards">
+              <article class="card card--soft">
+                <h3 class="card__title">Practice desktop or older laptop (~8 GB RAM)</h3>
+                <p class="card__text">
+                  Common for a reception PC, a spare room in a small clinic, or an
+                  older notebook: start with a <strong>smaller speech model</strong>
+                  so dictation feels responsive. Add optional note structuring later,
+                  or use a faster machine for that step if this one feels sluggish.
+                </p>
+              </article>
+              <article class="card card--soft">
+                <h3 class="card__title">Current MacBook, iMac, or Windows laptop (~16 GB)</h3>
+                <p class="card__text">
+                  Typical for a solo GP, specialist consult room, or home office: a
+                  <strong>medium speech model</strong> is often a good fit. Once
+                  transcription feels reliable, try light note structuring - then
+                  adjust in the app if needed.
+                </p>
+              </article>
+              <article class="card card--soft">
+                <h3 class="card__title">Higher-spec workstation or Apple with plenty of memory</h3>
+                <p class="card__text">
+                  For busy clinics, long dictation sessions, or when your EHR and
+                  browser already use a lot of RAM: you can usually aim for
+                  <strong>larger speech models</strong> and more capable optional
+                  structuring - then fine-tune in the picker.
+                </p>
+              </article>
+            </div>
+
+            <h2 id="verify-in-app">Fine-tune in <span class="brand">Miccy</span></h2>
+            <p>
+              Every computer is a bit different. Use the cards above as a
+              <strong>starting point</strong>, then download from
+              <span class="brand">Miccy</span>&apos;s model picker, run a short test
+              dictation, and move up or down if speed or accuracy is not right.
+            </p>
+
+            <details class="guide-details">
+              <summary class="guide-details__summary">
+                Technical details for IT and advanced users
+              </summary>
+              <div class="guide-details__body legal-page__body">
+                <h3 id="inventory">Know your machine (30 seconds)</h3>
+                <p>Before picking a model, note:</p>
+                <ul>
+                  <li>
+                    <strong>System RAM</strong> (e.g. 8 / 16 / 32 GB) - shared on Apple
+                    Silicon with GPU tasks.
+                  </li>
+                  <li>
+                    <strong>Discrete GPU VRAM</strong> (NVIDIA/AMD) if you have one -
+                    e.g. 4 / 8 / 12 GB. Integrated graphics usually shares system RAM.
+                  </li>
+                  <li>
+                    <strong>Apple Silicon (M1/M2/M3)</strong> - treat &quot;unified
+                    memory&quot; as both RAM and GPU pool; larger models need more total
+                    memory headroom.
+                  </li>
+                  <li>
+                    <strong>CPU-only</strong> is fine for smaller ASR models and small
+                    quantised LLMs - expect higher latency than GPU.
+                  </li>
+                </ul>
+
+                <h3 id="asr">Speech-to-text (ASR)</h3>
+                <p>
+                  Whisper-class models are usually named by size. Larger = better
+                  accuracy for many accents and languages, but heavier on disk, RAM, and
+                  compute. Numbers below are <strong>rules of thumb</strong>, not
+                  guarantees.
+                </p>
+                <div class="table-wrap">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Whisper tier (illustrative)</th>
+                        <th scope="col">Rough fit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Tiny / Base</th>
+                        <td>
+                          Low-end laptops, CPU-only, or very tight VRAM. Fastest, lowest
+                          accuracy - ok for quick tests, not ideal for difficult clinical
+                          dictation.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Small</th>
+                        <td>
+                          Balanced for many machines with limited GPU; good compromise on
+                          CPU if you can wait a bit.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Medium</th>
+                        <td>
+                          Strong quality; prefers a modern CPU with many cores or a GPU
+                          with several GB VRAM / enough unified memory on Apple Silicon.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Large</th>
+                        <td>
+                          Best quality for demanding audio; needs a capable GPU or Apple
+                          chip with plenty of unified RAM. Slow on weak CPUs.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Turbo (where offered)</th>
+                        <td>
+                          Often a speed-focused variant - check release notes in the app;
+                          still match to your hardware tier above.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  <strong>Parakeet / Moonshine</strong> (where available): typically
+                  optimised for <strong>English</strong> and very fast on supported
+                  hardware. Prefer them when your workflow is English-only and latency
+                  matters more than maximum language coverage - still confirm fit in the
+                  picker.
+                </p>
+
+                <h3 id="llm">Optional note structuring (LLM)</h3>
+                <p>
+                  Structuring uses a text model (often <strong>GGUF</strong> weights
+                  via <strong>llama.cpp</strong>, or your own <strong>Ollama</strong>-compatible
+                  server). Model &quot;size&quot; is measured in billions of parameters
+                  (<strong>7B, 13B, 70B</strong>...) and <strong>quantisation</strong>
+                  (Q4, Q5, Q8...) - lower quantisation = smaller file and less RAM/VRAM,
+                  some quality trade-off.
+                </p>
+                <p><strong>Very approximate VRAM / RAM needs (GGUF, inference):</strong></p>
+                <ul>
+                  <li>
+                    <strong>~7B at Q4</strong> - often on the order of <strong>4-6
+                    GB</strong> VRAM or unified memory for comfortable speed; CPU-only
+                    possible with enough system RAM but slower.
+                  </li>
+                  <li>
+                    <strong>~13B at Q4</strong> - often <strong>~8 GB+</strong> VRAM or
+                    headroom on unified memory machines.
+                  </li>
+                  <li>
+                    <strong>Larger (34B / 70B)</strong> - typically high-end GPUs or
+                    workstations; not a first choice on laptops with 8 GB RAM.
+                  </li>
+                </ul>
+                <p>
+                  If you <strong>point <span class="brand">Miccy</span> at Ollama</strong> (or similar) on another
+                  host, that machine&apos;s RAM/VRAM limits apply - your laptop only
+                  sends text, but the remote box must handle the model size you load
+                  there.
+                </p>
+              </div>
+            </details>
+
+            <p class="guide-page__cta-wrap">
+              <a class="btn btn--primary" href="../download/">Download <span class="brand">Miccy</span></a>
+              <a class="text-link guide-page__cta-secondary" href="../index.html#models-languages"
+                >Back to Models &amp; Languages</a
+              >
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__line">
+          © 2026
+          <a
+            href="https://anamedi.com"
+            rel="noopener noreferrer"
+            class="site-footer__company"
+            >Anamedi GmbH</a
+          >
+          ·
+          <a href="../impressum/">Impressum</a>
+          ·
+          <a href="../privacy/">Privacy Policy</a>
+          ·
+          <a href="mailto:info@anamedi.com">Contact</a>
+          ·
+          <a href="#" data-github-toast>Source code / GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

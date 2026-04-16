@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Miccy — free, open-source, 100% local ambient scribe for hospitals and doctors. macOS, Windows, Linux. App UI in 16 languages; speech models for 50+ languages."
+    />
+    <title>Miccy - Local ambient scribe for clinicians</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Luckiest+Guy&family=Nunito:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- PostHog Analytics -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init("phc_xzdLBTiVTxyUzQHgn3ynP7k3FDv85g4mBmWkdNXBrC9d", {
+        api_host: "https://eu.i.posthog.com",
+        person_profiles: "identified_only"
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="index.html"><span class="brand">Miccy</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#clinical-workflows">Workflows</a></li>
+            <li><a href="#models-languages">Models</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="download/" class="site-nav__emphasis">Download</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section" aria-labelledby="hero-heading">
+        <div class="container container--narrow hero__inner">
+          <figure class="hero__mascot">
+            <span class="mascot-bounce">
+              <img
+                src="assets/miccy-mascot.png"
+                alt="Miccy mascot: a friendly vintage-style microphone character"
+                width="360"
+                height="360"
+                loading="eager"
+              />
+            </span>
+          </figure>
+          
+          <p class="hero__kicker">
+            <span class="brand">Miccy</span>
+            <span class="hero__kicker-meta">Free · open source · local-first</span>
+          </p>
+          <h1 id="hero-heading" class="hero__title">
+            Ambient scribe for hospitals and doctors
+          </h1>
+          <p class="hero__lead">
+            Dictate, structure, and paste into any field at the cursor. For the default
+            workflow, speech and optional formatting stay on your device—not our servers.
+          </p>
+          <p class="hero__sub">
+            16-language UI · 50+ dictation languages · multilingual clinics, EU &amp; Switzerland
+          </p>
+          <p class="hero__disclaimer">
+            Documentation support only—not medical advice. Follow your institution's policies.
+          </p>
+        </div>
+      </section>
+
+      <section id="demo" class="section section--tight demo-section" aria-labelledby="demo-heading">
+        <div class="container container--download">
+          <h2 id="demo-heading" class="section__title">Demo</h2>
+          <p class="demo-section__intro">Demo coming soon.</p>
+          <!--
+            Replace the placeholder with your player, e.g.:
+            <video controls playsinline poster="assets/demo-poster.jpg" width="1280" height="720">
+              <source src="https://your-cdn.com/miccy-demo.mp4" type="video/mp4" />
+            </video>
+            Or: <iframe title="Miccy demo" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" loading="lazy" allowfullscreen></iframe>
+          -->
+          <div
+            class="video-placeholder"
+            role="img"
+            aria-label="Demo video placeholder - add your embed or file here"
+          >
+            <div class="video-placeholder__frame">
+              <span class="video-placeholder__play" aria-hidden="true"></span>
+              <p class="video-placeholder__title">Demo video</p>
+              <p class="video-placeholder__hint">Video will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="download-cta section section--tight">
+        <div class="container container--narrow download-cta__inner">
+          <a class="btn btn--primary" href="download/"
+            >Download for macOS / Windows / Linux</a
+          >
+          <p class="download-cta__note">
+            Free and open source (MIT). No per-seat subscription.
+          </p>
+          <a class="text-link" href="download/">View all downloads</a>
+        </div>
+      </section>
+
+      <div class="container">
+        <hr class="rule" />
+      </div>
+
+      <section id="features" class="section" aria-labelledby="features-heading">
+        <div class="container">
+          <h2 id="features-heading" class="section__title">Features</h2>
+          <div class="grid grid--2">
+            <article class="card">
+              <h3 class="card__title">Local-first speech</h3>
+              <p class="card__text">
+                High-quality transcription using Whisper-class and other
+                on-device engines. Voice activity detection trims silence so
+                recognition stays focused on speech.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Ambient structuring</h3>
+              <p class="card__text">
+                After transcription, optionally run note templates - cleanup,
+                bullet summaries, SOAP-style documentation, and more. Everything
+                can stay on your computer; if your practice already runs a local
+                model server, you can connect it in settings (see
+                <a href="#models-languages" class="inline-link">Models &amp; Languages</a>).
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Paste where you work</h3>
+              <p class="card__text">
+                <span class="brand">Miccy</span> uses system-level input: your text goes where the cursor
+                is in the active window - clinical software, browser, Word,
+                email, or a PiS / EHR. No special integration or API needed.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Global shortcut</h3>
+              <p class="card__text">
+                Choose a keyboard shortcut that fits your workflow - start and
+                stop dictation without leaving the app you are documenting in.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Works with any EHR / PiS</h3>
+              <p class="card__text">
+                Because <span class="brand">Miccy</span> drives the computer like a keyboard, it is not
+                tied to a single product. Use it with any system that accepts
+                text at the insertion point.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">History &amp; control</h3>
+              <p class="card__text">
+                Review past sessions, manage retention, and keep documentation
+                under your control on your machine.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="how-it-works"
+        class="section"
+        aria-labelledby="how-heading"
+      >
+        <div class="container container--steps">
+          <h2 id="how-heading" class="section__title">How It Works</h2>
+          <ol class="steps">
+            <li class="steps__item">
+              <div class="steps__num" aria-hidden="true">1</div>
+              <div class="steps__body">
+                <h3 class="steps__title">Download <span class="brand">Miccy</span></h3>
+                <p>
+                  Install on macOS, Windows, or Linux. Pull updates when you
+                  choose - the app can check for new releases.
+                </p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num" aria-hidden="true">2</div>
+              <div class="steps__body">
+                <h3 class="steps__title">Pick your transcription model</h3>
+                <p>
+                  Select the model that matches your language, accent, and
+                  hardware. Download once; use offline after that.
+                </p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num" aria-hidden="true">3</div>
+              <div class="steps__body">
+                <h3 class="steps__title">Pick your shortcut</h3>
+                <p>
+                  Set a global hotkey - push-to-talk or hold-to-record - so you
+                  can dictate without clicking around the EHR.
+                </p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num" aria-hidden="true">4</div>
+              <div class="steps__body">
+                <h3 class="steps__title">Transcribe</h3>
+                <p>
+                  Place the cursor where the text should go. Start the shortcut,
+                  speak, stop. <span class="brand">Miccy</span> turns speech into text on your computer.
+                </p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num" aria-hidden="true">5</div>
+              <div class="steps__body">
+                <h3 class="steps__title">Structure (optional)</h3>
+                <p>
+                  Enable post-processing and choose a template to polish the
+                  transcript or structure the note - on your device by default. If
+                  your clinic runs its own compatible model service, you can point
+                  <span class="brand">Miccy</span> at it in the app settings.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        id="clinical-workflows"
+        class="section"
+        aria-labelledby="workflows-heading"
+      >
+        <div class="container">
+          <h2 id="workflows-heading" class="section__title">Clinical workflows</h2>
+          <p class="section__intro section__intro--narrow">
+            A few places teams already use dictation-to-text: you place the cursor,
+            run <span class="brand">Miccy</span>, and paste into the field you are in.
+          </p>
+          <div class="grid grid--2">
+            <article class="card card--soft">
+              <h3 class="card__title">Outpatient consult note</h3>
+              <p class="card__text">
+                Dictate history, exam, and plan into the open encounter in your PiS
+                or EHR—then optionally tidy bullets or SOAP-style blocks on device.
+              </p>
+            </article>
+            <article class="card card--soft">
+              <h3 class="card__title">Ward round note</h3>
+              <p class="card__text">
+                Capture bedside findings and jobs for the list in one pass; paste
+                into the ward system or shared document without switching apps mid-round.
+              </p>
+            </article>
+            <article class="card card--soft">
+              <h3 class="card__title">Discharge summary</h3>
+              <p class="card__text">
+                Speak the course, procedures, and follow-up; structure into sections
+                before you drop the text into the discharge editor or letter template.
+              </p>
+            </article>
+            <article class="card card--soft">
+              <h3 class="card__title">Referral or handoff draft</h3>
+              <p class="card__text">
+                Draft the clinical question and summary for another service or GP;
+                polish wording locally, then paste into your referral form or email.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="models-languages"
+        class="section"
+        aria-labelledby="models-heading"
+      >
+        <div class="container">
+          <h2 id="models-heading" class="section__title">Models &amp; Languages</h2>
+          <div class="prose-block">
+            <h3 class="prose-block__title">Speech-to-text (transcription)</h3>
+            <p>
+              Download models that match your language and hardware from inside
+              the app. The table below is illustrative; exact names appear in
+              <span class="brand">Miccy</span>’s model picker.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Family</th>
+                  <th scope="col">Examples (illustrative)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Whisper</th>
+                  <td>
+                    Small, Medium, Turbo, Large - strong multilingual dictation;
+                    pick Auto or a specific language for better accuracy.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Parakeet</th>
+                  <td>
+                    Optimised for English - very fast, high quality for English
+                    consultations.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Moonshine</th>
+                  <td>
+                    English, very fast - great when latency matters.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine-print">
+            Exact model names and files are shown inside <span class="brand">Miccy</span>’s model picker.
+          </p>
+          <div class="models-guide-cta">
+            <a class="btn btn--primary" href="models-guide/"
+              >Which model fits my computer?</a
+            >
+            <p class="models-guide-cta__hint">
+              Starting points for typical practice computers - exact models are
+              listed in the app.
+            </p>
+          </div>
+          <div class="prose-block prose-block--spaced">
+            <h3 class="prose-block__title">
+              Note structuring (optional, on-device or your server)
+            </h3>
+            <p>
+              After transcription, you can run templates for cleanup, bullets,
+              SOAP-style sections, and more. By default this runs with a
+              built-in local setup on your machine. If you prefer, you can
+              <strong>point <span class="brand">Miccy</span> at your own</strong> compatible model service on
+              your network (for example one your IT team already hosts). Nothing
+              needs to leave your environment for that step when you configure it
+              to stay local.
+            </p>
+          </div>
+          <h3 class="subsection-title" id="languages-heading">Languages</h3>
+          <p class="fine-print fine-print--languages">
+            Multilingual clinics and EU / Swiss settings often need both a familiar
+            UI language for staff and flexible dictation languages—<span class="brand">Miccy</span> is built
+            for that combination out of the box.
+          </p>
+          <div class="stack stack--cards">
+            <article class="card card--soft">
+              <h4 class="card__title">16-language app UI</h4>
+              <p class="card__text">
+                Run the app in the language your team prefers: English, German, French,
+                Italian, Spanish, Chinese, Japanese, Korean, Polish, Russian,
+                Ukrainian, Portuguese, Czech, Turkish, Vietnamese, or Arabic
+                (right-to-left)—without patching separate builds per site.
+              </p>
+            </article>
+            <article class="card card--soft">
+              <h4 class="card__title">Dictation</h4>
+              <p class="card__text">
+                Automatic language detection, or choose from 50+ recognition
+                languages (Whisper-oriented list). English-only engines are
+                labelled in the app - use Whisper for the broadest multilingual
+                clinical dictation.
+              </p>
+            </article>
+            <article class="card card--soft">
+              <h4 class="card__title">Templates &amp; structuring</h4>
+              <p class="card__text">
+                Built-in examples are tuned especially for German clinical
+                wording; you can adapt prompts for your own language and style.
+                Prompts stay under your control whether you use the default local
+                setup or connect your own server in settings.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="who-its-for"
+        class="section section--who"
+        aria-labelledby="who-heading"
+      >
+        <div class="container">
+          <h2 id="who-heading" class="section__title">Who it is for (and not)</h2>
+          <p class="section__intro section__intro--narrow">
+            <span class="brand">Miccy</span> assists with documentation; it does not diagnose or replace
+            clinical judgment. Local processing is the default, but your institution
+            still sets the rules.
+          </p>
+          <div class="grid grid--2 who-grid">
+            <article class="card card--soft who-grid__card">
+              <h3 class="card__title">A strong fit if…</h3>
+              <ul class="who-grid__list">
+                <li>
+                  You want <strong>ambient-style</strong> speech-to-text and optional
+                  structuring <strong>without a per-seat cloud scribe</strong>.
+                </li>
+                <li>
+                  Your priority is keeping <strong>consultation audio and note text on
+                  hardware you control</strong> for the core workflow.
+                </li>
+                <li>
+                  You work in <strong>hospitals, practices, or outpatient settings</strong>
+                  where the PiS/EHR accepts text at the caret, or you draft in Word,
+                  email, or browser.
+                </li>
+                <li>
+                  You value <strong>open source (MIT)</strong>, a global UI, and the option
+                  to tune models and prompts yourself.
+                </li>
+              </ul>
+            </article>
+            <article class="card card--soft who-grid__card who-grid__card--muted">
+              <h3 class="card__title">Not the right tool if…</h3>
+              <ul class="who-grid__list">
+                <li>
+                  You need a <strong>vendor-certified medical device</strong> or a formal
+                  integration contract with your EHR vendor—<span class="brand">Miccy</span> behaves like a
+                  fast typist at the keyboard, not a certified module.
+                </li>
+                <li>
+                  You expect <strong>guaranteed enterprise SLAs, central admin, or
+                  off-the-shelf clinical content packs</strong> from us—this is community
+                  software you deploy and govern.
+                </li>
+                <li>
+                  You require <strong>every byte of traffic to stay in a specific
+                  certified cloud region</strong> while still using hosted vendor ASR;
+                  the default here is local inference (you choose any remote endpoints
+                  explicitly).
+                </li>
+                <li>
+                  You want <strong>fully hands-off ambient documentation</strong> with zero
+                  review—human oversight and local policy still apply.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="section prose-section" aria-labelledby="ehr-heading">
+        <div class="container container--narrow">
+          <h2 id="ehr-heading" class="section__title">
+            EHR / PiS Compatibility
+          </h2>
+          <p class="centered-prose">
+            <span class="brand">Miccy</span> does not need a custom interface from your hospital vendor.
+            It works like a fast typist at your keyboard: text appears where the
+            cursor is. That means compatibility with any documentation system
+            that accepts text entry - today’s PiS/EHR and future tools - without
+            waiting on integration projects.
+          </p>
+          <hr class="rule rule--short" />
+          <h2 class="section__title" id="privacy-subheading">
+            Privacy
+          </h2>
+          <p class="centered-prose">
+            <span class="brand">Miccy</span> is built so speech and note structuring can stay on your
+            device for the default local workflow. Model downloads and app updates
+            use the internet; first-time setup may require downloading speech and
+            optional structuring models. Read the
+            <a href="privacy/" class="inline-link">Privacy Policy</a> for details and
+            for your jurisdiction.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section" aria-labelledby="faq-heading">
+        <div class="container container--faq">
+          <h2 id="faq-heading" class="section__title">FAQ</h2>
+          <div class="faq">
+            <details class="faq__item">
+              <summary class="faq__summary">Is <span class="brand">Miccy</span> free?</summary>
+              <div class="faq__panel">
+                <p>
+                  <span class="brand">Miccy</span> is free and open source under the MIT license. You may
+                  still choose to download third-party models under their own
+                  terms from within the app.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">
+                How does <span class="brand">Miccy</span> compare to Dragon Medical, Heidi, or other paid
+                scribes?
+              </summary>
+              <div class="faq__panel">
+                <p>
+                  Products like <strong>Dragon Medical</strong> are established
+                  paid dictation solutions, often with enterprise licensing.
+                  Ambient AI scribes such as <strong>Heidi</strong> or
+                  <strong>Abridge</strong> (and similar offerings from other
+                  vendors) usually charge subscription fees and run your audio
+                  through vendor infrastructure. <span class="brand">Miccy</span> targets teams and
+                  individuals who want a <strong>free, MIT-licensed</strong> path
+                  with <strong>local processing</strong> for the default workflow
+                  - you trade vendor-managed polish for control, transparency, and
+                  no per-seat bill. Product names above are trademarks of their
+                  respective owners.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Does it work offline?</summary>
+              <div class="faq__panel">
+                <p>
+                  After models are downloaded, core transcription and on-device
+                  structuring can run without a network connection. Updates and
+                  model downloads need the internet.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Will it work with our EHR?</summary>
+              <div class="faq__panel">
+                <p>
+                  <span class="brand">Miccy</span> types into the focused field like a keyboard. If your
+                  EHR or PiS accepts text at the caret, <span class="brand">Miccy</span> can paste there
+                  without vendor-specific integration.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">What about patient data?</summary>
+              <div class="faq__panel">
+                <p>
+                  For the default local workflow, audio and transcripts are
+                  processed on your machine. Your organisation’s policies and
+                  logging tools still apply - treat workstations like any other
+                  clinical endpoint.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Which languages?</summary>
+              <div class="faq__panel">
+                <p>
+                  The app UI is available in 16 languages. For dictation, pick
+                  from 50+ recognition languages or automatic detection, with
+                  Whisper offering the broadest multilingual coverage. See
+                  <a href="#languages-heading">Languages</a> above for detail.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="manifesto"
+        class="section manifesto"
+        aria-labelledby="manifesto-heading"
+      >
+        <div class="container container--narrow manifesto__inner">
+          <h2 id="manifesto-heading" class="manifesto__hook">
+            Why we are making clinical AI free and 100% local.
+          </h2>
+          <div class="manifesto__body">
+            <p>
+              Healthcare software should not force a trade-off between powerful
+              documentation and patient privacy. We build <span class="brand">Miccy</span> so clinicians can
+              run speech and note structuring on hardware they own - no mandatory
+              cloud handoff for the core workflow, no per-seat tax on essential
+              tools, and a path anyone can inspect, fork, and improve.
+            </p>
+            <p class="manifesto__sig">- Anamedi Team</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--final-cta" aria-labelledby="final-cta-heading">
+        <div class="container container--narrow final-cta">
+          <figure class="final-cta__mascot">
+            <span class="mascot-bounce">
+              <img
+                src="assets/miccy-mascot.png"
+                alt=""
+                width="220"
+                height="220"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+          </figure>
+          <h2 id="final-cta-heading" class="final-cta__title">
+            Ready to simplify your documentation?
+          </h2>
+          <a class="btn btn--primary" href="download/">Download Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__line">
+          © 2026
+          <a
+            href="https://anamedi.com"
+            rel="noopener noreferrer"
+            class="site-footer__company"
+            >Anamedi GmbH</a
+          >
+          ·
+          <a href="impressum/">Impressum</a>
+          ·
+          <a href="privacy/">Privacy Policy</a>
+          ·
+          <a href="mailto:info@anamedi.com">Contact</a>
+          ·
+          <a href="#" data-github-toast>Source code / GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
