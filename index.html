@@ -7,7 +7,30 @@
       name="description"
       content="Miccy — free, open-source, 100% local ambient scribe for hospitals and doctors. macOS, Windows, Linux. App UI in 16 languages; speech models for 50+ languages."
     />
-    <title>Miccy - Local ambient scribe for clinicians</title>
+    <title>Miccy — Free, local AI scribe for dictation &amp; scribing</title>
+    <!-- If you deploy under a path (e.g. GitHub Pages /repo/), prefix og/twitter image URLs with that base. -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/mascot.png" />
+    <link rel="canonical" href="./" />
+    <meta name="theme-color" content="#f9f7f2" />
+    <meta name="author" content="Anamedi GmbH" />
+    <meta name="application-name" content="Miccy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Miccy" />
+    <meta property="og:title" content="Miccy — Free, local AI scribe for dictation &amp; scribing" />
+    <meta
+      property="og:description"
+      content="Miccy — free, open-source, 100% local ambient scribe for hospitals and doctors. macOS, Windows, Linux. App UI in 16 languages; speech models for 50+ languages."
+    />
+    <meta property="og:image" content="assets/miccy-mascot.png" />
+    <meta property="og:image:alt" content="Miccy mascot: a friendly vintage-style microphone character" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Miccy — Free, local AI scribe for dictation &amp; scribing" />
+    <meta
+      name="twitter:description"
+      content="Miccy — free, open-source, 100% local ambient scribe for hospitals and doctors. macOS, Windows, Linux. App UI in 16 languages; speech models for 50+ languages."
+    />
+    <meta name="twitter:image" content="assets/miccy-mascot.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -72,11 +95,11 @@
             <span class="hero__kicker-meta">Free · open source · local-first</span>
           </p>
           <h1 id="hero-heading" class="hero__title">
-            Ambient scribe for hospitals and doctors
+            Free, local AI scribe - dictation and scribing at your cursor
           </h1>
           <p class="hero__lead">
-            Dictate, structure, and paste into any field at the cursor. For the default
-            workflow, speech and optional formatting stay on your device—not our servers.
+            Dictate, structure, and paste into any field at the cursor. Speech and
+            optional formatting stay on your device—not on servers.
           </p>
           <p class="hero__sub">
             16-language UI · 50+ dictation languages · multilingual clinics, EU &amp; Switzerland
@@ -88,26 +111,17 @@
       </section>
 
       <section id="demo" class="section section--tight demo-section" aria-labelledby="demo-heading">
-        <div class="container container--download">
+        <div class="container container--demo">
           <h2 id="demo-heading" class="section__title">Demo</h2>
-          <p class="demo-section__intro">Demo coming soon.</p>
-          <!--
-            Replace the placeholder with your player, e.g.:
-            <video controls playsinline poster="assets/demo-poster.jpg" width="1280" height="720">
-              <source src="https://your-cdn.com/miccy-demo.mp4" type="video/mp4" />
-            </video>
-            Or: <iframe title="Miccy demo" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" loading="lazy" allowfullscreen></iframe>
-          -->
-          <div
-            class="video-placeholder"
-            role="img"
-            aria-label="Demo video placeholder - add your embed or file here"
-          >
-            <div class="video-placeholder__frame">
-              <span class="video-placeholder__play" aria-hidden="true"></span>
-              <p class="video-placeholder__title">Demo video</p>
-              <p class="video-placeholder__hint">Video will appear here.</p>
-            </div>
+          <div class="demo-section__video">
+            <iframe
+              title="Miccy product demo"
+              src="https://player.vimeo.com/video/1184099830"
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -238,8 +252,8 @@
                 <h3 class="steps__title">Structure (optional)</h3>
                 <p>
                   Enable post-processing and choose a template to polish the
-                  transcript or structure the note - on your device by default. If
-                  your clinic runs its own compatible model service, you can point
+                  transcript or structure the note on your device. If your clinic
+                  runs its own compatible model service, you can point
                   <span class="brand">Miccy</span> at it in the app settings.
                 </p>
               </div>
@@ -395,7 +409,7 @@
               <p class="card__text">
                 Built-in examples are tuned especially for German clinical
                 wording; you can adapt prompts for your own language and style.
-                Prompts stay under your control whether you use the default local
+                Prompts stay under your control whether you use the built-in local
                 setup or connect your own server in settings.
               </p>
             </article>
@@ -412,8 +426,8 @@
           <h2 id="who-heading" class="section__title">Who it is for (and not)</h2>
           <p class="section__intro section__intro--narrow">
             <span class="brand">Miccy</span> assists with documentation; it does not diagnose or replace
-            clinical judgment. Local processing is the default, but your institution
-            still sets the rules.
+            clinical judgment. Speech and structuring stay on your device; your
+            institution still sets the rules.
           </p>
           <div class="grid grid--2 who-grid">
             <article class="card card--soft who-grid__card">
@@ -484,10 +498,9 @@
             Privacy
           </h2>
           <p class="centered-prose">
-            <span class="brand">Miccy</span> is built so speech and note structuring can stay on your
-            device for the default local workflow. Model downloads and app updates
-            use the internet; first-time setup may require downloading speech and
-            optional structuring models. Read the
+            <span class="brand">Miccy</span> is built so speech and note structuring stay on your
+            device. Model downloads and app updates use the internet; first-time setup
+            may require downloading speech and optional structuring models. Read the
             <a href="privacy/" class="inline-link">Privacy Policy</a> for details and
             for your jurisdiction.
           </p>
@@ -522,9 +535,9 @@
                   vendors) usually charge subscription fees and run your audio
                   through vendor infrastructure. <span class="brand">Miccy</span> targets teams and
                   individuals who want a <strong>free, MIT-licensed</strong> path
-                  with <strong>local processing</strong> for the default workflow
-                  - you trade vendor-managed polish for control, transparency, and
-                  no per-seat bill. Product names above are trademarks of their
+                  with <strong>local processing on your machine</strong>—you trade
+                  vendor-managed polish for control, transparency, and no per-seat
+                  bill. Product names above are trademarks of their
                   respective owners.
                 </p>
               </div>
@@ -553,10 +566,9 @@
               <summary class="faq__summary">What about patient data?</summary>
               <div class="faq__panel">
                 <p>
-                  For the default local workflow, audio and transcripts are
-                  processed on your machine. Your organisation’s policies and
-                  logging tools still apply - treat workstations like any other
-                  clinical endpoint.
+                  Audio and transcripts are processed on your machine. Your
+                  organisation’s policies and logging tools still apply—treat
+                  workstations like any other clinical endpoint.
                 </p>
               </div>
             </details>

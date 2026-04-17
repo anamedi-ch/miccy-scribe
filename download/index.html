@@ -13,6 +13,28 @@
       content="Download Miccy for macOS, Windows, or Linux. Quick tutorial for running unsigned builds."
     />
     <title>Download Miccy</title>
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../assets/mascot.png" />
+    <link rel="canonical" href="./" />
+    <meta name="theme-color" content="#f9f7f2" />
+    <meta name="author" content="Anamedi GmbH" />
+    <meta name="application-name" content="Miccy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Miccy" />
+    <meta property="og:title" content="Download Miccy" />
+    <meta
+      property="og:description"
+      content="Download Miccy for macOS, Windows, or Linux. Quick tutorial for running unsigned builds."
+    />
+    <meta property="og:image" content="../assets/miccy-mascot.png" />
+    <meta property="og:image:alt" content="Miccy mascot: a friendly vintage-style microphone character" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Download Miccy" />
+    <meta
+      name="twitter:description"
+      content="Download Miccy for macOS, Windows, or Linux. Quick tutorial for running unsigned builds."
+    />
+    <meta name="twitter:image" content="../assets/miccy-mascot.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,7 +85,8 @@
           <h1 class="download-page__title">Download <span class="brand">Miccy</span></h1>
           <p class="download-page__lead">
             Choose your platform below. Builds are not code-signed yet; see the
-            short guide and video on how to open them safely on your system.
+            short guide below, and open the optional macOS video only if you need
+            help with download and first launch.
           </p>
         </div>
       </section>
@@ -74,32 +97,43 @@
       >
         <div class="container container--download">
           <h2 id="tutorial-heading" class="download-page__section-title">
-            Quick start (video)
+            Quick start (macOS video)
           </h2>
-          <p class="download-page__section-intro">
-            Watch how to download, allow the app past your system’s security
-            prompts, and launch <span class="brand">Miccy</span> the first time.
+          <p class="download-page__tutorial-lead">
+            Optional on Mac only — use the panel below if you need help with download and first
+            launch. Windows is usually simpler; we are not planning a separate demo for it.
           </p>
-          <!--
-            Replace the placeholder below with your player, for example:
-            <video class="tutorial-video-el" controls playsinline poster="../assets/tutorial-poster.jpg" width="1280" height="720">
-              <source src="https://your-cdn.com/miccy-tutorial.mp4" type="video/mp4" />
-            </video>
-            Or: <iframe title="<span class="brand">Miccy</span> tutorial" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" loading="lazy" allowfullscreen></iframe>
-          -->
-          <div
-            class="video-placeholder"
-            role="img"
-            aria-label="Video tutorial placeholder - add your tutorial embed here"
-          >
-            <div class="video-placeholder__frame">
-              <span class="video-placeholder__play" aria-hidden="true"></span>
-              <p class="video-placeholder__title">Tutorial video</p>
-              <p class="video-placeholder__hint">
-                Placeholder - embed your MP4, YouTube, or Vimeo player here.
+          <details class="download-page__tutorial-accordion">
+            <summary class="download-page__tutorial-summary">
+              <span class="download-page__tutorial-summary-label">Show step-by-step video</span>
+              <span class="download-page__tutorial-summary-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="download-page__tutorial-panel">
+              <p class="download-page__section-intro download-page__section-intro--flush">
+                This walkthrough is aimed at <strong>macOS</strong>: download, allow the app past
+                Gatekeeper, and launch <span class="brand">Miccy</span> the first time.
+              </p>
+              <div class="download-page__video">
+                <iframe
+                  title="Miccy macOS quick start: download and first launch"
+                  src="https://player.vimeo.com/video/1184088914"
+                  loading="lazy"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                  allowfullscreen
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+              </div>
+              <p class="download-page__video-caption">
+                Watch on Vimeo:
+                <a
+                  href="https://vimeo.com/1184088914"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                  >vimeo.com/1184088914</a
+                >
               </p>
             </div>
-          </div>
+          </details>
         </div>
       </section>
 
@@ -153,37 +187,28 @@
           <h2 id="downloads-heading" class="download-page__section-title">
             Choose a download
           </h2>
-          <p class="download-page__section-intro">
-            Miccy <strong>v0.7.1</strong> is published on GitHub as
-            <a
-              href="https://github.com/anamedi-ch/anamedi_lokal/releases/latest"
-              rel="noopener noreferrer"
-              >Latest</a
-            >
-            (<a
-              href="https://github.com/anamedi-ch/anamedi_lokal/releases/tag/v0.7.1"
-              rel="noopener noreferrer"
-              >release page</a
-            >). Primary downloads below target the most common CPU architecture;
-            the footnote lists MSI, ARM64, DEB, RPM, and the other AppImage.
-            <a
-              href="https://github.com/anamedi-ch/anamedi_lokal/commits/v0.7.1"
-              rel="noopener noreferrer"
-              >Changelog</a
-            >.
-          </p>
-          <div class="download-buttons">
+          <div class="download-buttons download-buttons--quad">
             <a
               class="btn btn--primary btn--download"
-              id="download-macos"
-              href="https://github.com/anamedi-ch/anamedi_lokal/releases/tag/v0.7.1"
-              data-platform="macos"
-              >macOS: view release</a
+              id="download-macos-aarch64"
+              href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_aarch64.dmg"
+              download="Miccy_0.7.1_aarch64.dmg"
+              data-platform="macos_aarch64"
+              >Download for macOS (Apple&nbsp;Silicon)</a
+            >
+            <a
+              class="btn btn--primary btn--download"
+              id="download-macos-x64"
+              href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_x64.dmg"
+              download="Miccy_0.7.1_x64.dmg"
+              data-platform="macos_x64"
+              >Download for macOS (Intel)</a
             >
             <a
               class="btn btn--primary btn--download"
               id="download-windows"
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_x64-setup.exe"
+              download="Miccy_0.7.1_x64-setup.exe"
               data-platform="windows"
               >Download for Windows (x64)</a
             >
@@ -191,6 +216,7 @@
               class="btn btn--primary btn--download"
               id="download-linux"
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_amd64.AppImage"
+              download="Miccy_0.7.1_amd64.AppImage"
               data-platform="linux"
               >Download for Linux (x64 AppImage)</a
             >
@@ -200,45 +226,52 @@
             Windows ARM64
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_arm64-setup.exe"
+              download="Miccy_0.7.1_arm64-setup.exe"
               rel="noopener noreferrer"
               >setup</a
             >,
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_x64_en-US.msi"
+              download="Miccy_0.7.1_x64_en-US.msi"
               rel="noopener noreferrer"
               >x64 MSI</a
             >,
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_arm64_en-US.msi"
+              download="Miccy_0.7.1_arm64_en-US.msi"
               rel="noopener noreferrer"
               >ARM64 MSI</a
             >. Linux DEB
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_amd64.deb"
+              download="Miccy_0.7.1_amd64.deb"
               rel="noopener noreferrer"
               >amd64</a
             >,
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_arm64.deb"
+              download="Miccy_0.7.1_arm64.deb"
               rel="noopener noreferrer"
               >arm64</a
             >;
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy_0.7.1_aarch64.AppImage"
+              download="Miccy_0.7.1_aarch64.AppImage"
               rel="noopener noreferrer"
               >aarch64 AppImage</a
             >; RPM
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy-0.7.1-1.x86_64.rpm"
+              download="Miccy-0.7.1-1.x86_64.rpm"
               rel="noopener noreferrer"
               >x86_64</a
             >,
             <a
               href="https://github.com/anamedi-ch/anamedi_lokal/releases/download/v0.7.1/Miccy-0.7.1-1.aarch64.rpm"
+              download="Miccy-0.7.1-1.aarch64.rpm"
               rel="noopener noreferrer"
               >aarch64</a
-            >. There is no macOS binary in this asset set yet—the release page
-            lists everything published for this tag. Free and open source (MIT).
+            >. Free and open source (MIT).
           </p>
         </div>
       </section>

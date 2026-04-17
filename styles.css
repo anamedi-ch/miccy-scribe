@@ -1238,6 +1238,10 @@ html.motion-ok .faq__panel {
   }
 }
 
+.container--demo {
+  width: min(100% - 2.5rem, 1200px);
+}
+
 .container--download {
   width: min(100% - 2.5rem, 720px);
   margin-inline: auto;
@@ -1405,15 +1409,6 @@ html.motion-ok .faq__panel {
   margin-top: 1rem;
 }
 
-.demo-section__intro {
-  max-width: 36rem;
-  margin: 0 auto 1.5rem;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  text-align: center;
-  color: var(--ink-muted);
-}
-
 .download-page__title {
   margin: 0 0 1rem;
   font-family: var(--font-display);
@@ -1453,6 +1448,93 @@ html.motion-ok .faq__panel {
   padding: 0.1em 0.3em;
   border-radius: 4px;
   background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.download-page__tutorial-lead {
+  margin: 0 auto 1.1rem;
+  max-width: 40rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+.download-page__tutorial-accordion {
+  margin: 0;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow), 0 16px 40px -28px rgba(26, 28, 46, 0.35);
+  overflow: hidden;
+}
+
+.download-page__tutorial-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: linear-gradient(
+    165deg,
+    #2e3148 0%,
+    var(--accent) 48%,
+    #12131c 100%
+  );
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-page__tutorial-summary::-webkit-details-marker {
+  display: none;
+}
+
+.download-page__tutorial-summary::-moz-list-marker {
+  display: none;
+}
+
+.download-page__tutorial-summary:hover {
+  filter: brightness(1.06);
+}
+
+.download-page__tutorial-summary:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+.download-page__tutorial-summary-label {
+  flex: 1;
+  text-align: left;
+}
+
+.download-page__tutorial-summary-chevron {
+  flex-shrink: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.1rem;
+  border-right: 2.5px solid rgba(255, 255, 255, 0.92);
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.92);
+  transform: rotate(45deg);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.download-page__tutorial-accordion[open] .download-page__tutorial-summary-chevron {
+  margin-top: 0.28rem;
+  transform: rotate(225deg);
+}
+
+.download-page__tutorial-panel {
+  padding: 1.15rem 1.15rem 1.35rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg-elevated);
+}
+
+.download-page__section-intro--flush {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
 }
 
 .video-placeholder {
@@ -1519,6 +1601,35 @@ html.motion-ok .faq__panel {
   max-width: 28ch;
 }
 
+.download-page__video,
+.demo-section__video {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow), 0 20px 48px -32px rgba(26, 28, 46, 0.15);
+  overflow: hidden;
+  background: #0f0f12;
+}
+
+.download-page__video iframe,
+.demo-section__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.download-page__video-caption {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
+
 .unsigned-notice {
   text-align: left;
 }
@@ -1563,10 +1674,17 @@ html.motion-ok .faq__panel {
   gap: 1rem;
 }
 
+.download-buttons--quad {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @media (min-width: 640px) {
   .download-buttons {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
+  }
+
+  .download-buttons:not(.download-buttons--quad) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
