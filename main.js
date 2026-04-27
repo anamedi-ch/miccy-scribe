@@ -76,47 +76,9 @@
 
 (function () {
   "use strict";
-  const githubLinks = document.querySelectorAll("[data-github-toast]");
-  if (githubLinks.length === 0) {
-    return;
-  }
-  const MESSAGE =
-    "Code will be available in a bit as we are preparing the tutorials to self built it.";
-  let toastElement = null;
-  let hideTimerId = 0;
-  function getOrCreateToast() {
-    if (toastElement) {
-      return toastElement;
-    }
-    toastElement = document.createElement("div");
-    toastElement.className = "toast";
-    toastElement.setAttribute("role", "status");
-    toastElement.setAttribute("aria-live", "polite");
-    toastElement.setAttribute("aria-hidden", "true");
-    document.body.appendChild(toastElement);
-    return toastElement;
-  }
-  function hideToast() {
-    if (!toastElement) {
-      return;
-    }
-    toastElement.classList.remove("toast--visible");
-    toastElement.setAttribute("aria-hidden", "true");
-  }
-  function showToast() {
-    const el = getOrCreateToast();
-    el.textContent = MESSAGE;
-    el.removeAttribute("aria-hidden");
-    el.classList.add("toast--visible");
-    window.clearTimeout(hideTimerId);
-    hideTimerId = window.setTimeout(function () {
-      hideToast();
-    }, 5500);
-  }
+  const githubLinks = document.querySelectorAll("a.miccy-github-source");
   githubLinks.forEach(function (anchor) {
-    anchor.addEventListener("click", function (event) {
-      event.preventDefault();
-      showToast();
+    anchor.addEventListener("click", function () {
       var posthog = window.posthog;
       if (posthog && typeof posthog.capture === "function") {
         try {
@@ -126,16 +88,6 @@
         }
       }
     });
-  });
-  document.addEventListener("keydown", function (event) {
-    if (
-      event.key === "Escape" &&
-      toastElement &&
-      toastElement.classList.contains("toast--visible")
-    ) {
-      window.clearTimeout(hideTimerId);
-      hideToast();
-    }
   });
 })();
 
